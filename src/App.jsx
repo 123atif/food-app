@@ -1,12 +1,12 @@
 import React from 'react';
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from '../Component/navbar';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-     <div className="h-screen bg-stone-950	">
+     <div className="h-screen bg-stone-950">
      
-      <Navbar/>
+      <Navbar />
     </div>
   );
 }
