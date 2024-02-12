@@ -1,14 +1,14 @@
-// Navbar.jsx
 import React from 'react';
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
 
+
 const Navbar = ({ click, setClick }) => { 
   return (
-    <div className='flex justify-between items-center px-28 lg:px-28 py-1'>
-    <img src='./src/images/logo.png' alt="Logo" className='h-7 w-12 sm:h-20 sm:w-20'/>
+    <div className='flex justify-between items-center px-28 lg:px-28 py-3'>
+    <img src='./src/images/logo.png' alt="Logo" className='h-12 w-12 sm:h-20 sm:w-20'/>
     <ul className="hidden md:flex text-white ml-4"> 
           <li className='px-3'>Home</li>
           <li className='px-3'>about</li>
