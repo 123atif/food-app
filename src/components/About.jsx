@@ -4,13 +4,13 @@ const About = () => {
   return (
     <div className="py-8 px-4 sm:px-8 md:px-16 lg:px-28">
       <div className="flex flex-col items-center">
-      <h2 className=" font-bold font-mono text-4xl text-center mt-1">
-      <span className="text-yellow-500">ABOUT </span> <span className="text-white">US</span>
+      <h2 className="font-bold text-4xl text-center mb-7">
+      <span className="text-yellow-500">ABOUT</span> <span className="text-white">US</span>
         </h2>
         <div className='flex flex-col sm:flex-row sm:items-center pb-2 bg-zinc-900 mt-3'>
           <img src='./src/images/about-img1.jpg' alt="About Image" className='w-full h-full sm:w-[35rem] sm:mb-0'/>
-          <div className="ml-2 sm:ml-8 mb-5">
-            <h2 className="font-bold text-3xl text-white mb-1 sm:mt-[3rem]">
+          <div className="ml-2 sm:ml-8 mb-5 mt-3">
+            <h2 className="font-bold text-3xl text-white mb-1">
               What Makes Our Food Special?
             </h2>
             <p className='text-white mb-4'>

@@ -1,15 +1,14 @@
 import React from 'react';
 import { IoIosEye } from "react-icons/io";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
-import PropData from '../PropData';
 import ReactStars from 'react-rating-star-with-type';
 import { productList } from '../data';
-
+import Heading from './common/Heading';
 const Product = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-8"> {/* Add margin space */}
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
       <div className='m-5'>
-      <PropData name={"our products"} />
+      <Heading firstHeading={"OUR  PRODUCTS"}/>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {productList.map((item) => (

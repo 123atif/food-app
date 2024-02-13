@@ -1,12 +1,12 @@
 import React from 'react';
 import { menuList } from '../data';
-import PropData from '../PropData';
+import Heading from './common/Heading';
 
 const Menu = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className='m-5'>
-      <PropData name={"our menu"} />
+      <Heading firstHeading={"OUR  MENU"} />
        </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {menuList.map((item) => (
@@ -16,7 +16,7 @@ const Menu = () => {
               <p>{item.title}</p>
               <p>{item.price}</p>
             </div>
-            <button className='text-white bg-yellow-500 p-1 px-4'>Add To Cart</button>
+            <button className='text-white bg-yellow-500 p-1 px-4 m-4'>Add To Cart</button>
           </div>
         ))}
       </div>
