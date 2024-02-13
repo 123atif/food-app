@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuList from '../MenuList';
+import { menuList } from '../data';
 import PropData from '../PropData';
 
 const Menu = (props) => {
@@ -7,7 +7,7 @@ const Menu = (props) => {
     <div>
       <PropData />
       <div className="grid grid-cols-1 gap-2 mt-5 sm:grid-cols-2 md:grid-cols-3">
-        {MenuList.map((item) => (
+        {menuList.map((item) => (
           <div key={item.id} className='text-white text-center border-solid border-2 border-yellow-500 p-4 hover:bg-yellow-900 duration-200'>
             <img src={item.img} alt='Food' className="mx-auto" />
             <div className='font-bold'>

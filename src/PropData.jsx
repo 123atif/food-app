@@ -10,4 +10,6 @@ const PropData = () => {
   )
 }
 
+
+
 export default PropData;

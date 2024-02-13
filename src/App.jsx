@@ -7,6 +7,7 @@ import About from './components/About';
  import Menu from './components/Menu';
 import Product from './components/Product';
 import Reviews from './components/Reviews';
+import Contact from './components/Contact';
 
 function App() {
   const [click, setClick] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <Menu/>
       <Product/>
       <Reviews/>
+      <Contact/>
     </div>
     
   );

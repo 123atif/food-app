@@ -2,15 +2,14 @@ import React from 'react';
 import { IoIosEye } from "react-icons/io";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import PropData from '../PropData';
-import ProductList from '../ProductList';
 import ReactStars from 'react-rating-star-with-type';
-
-const Product = (props) => {
+import { productList } from '../data';
+const Product = () => {
   return (
     <div>
       <PropData />
       <div className="flex justify-evenly mt-5 sm:grid-cols-2 md:grid-cols-3">
-        {ProductList.map((item) => (
+        {productList.map((item) => (
           <div key={item.id} className='text-white text-center border-solid border-2 border-yellow-500 p-4 hover:bg-yellow-900 duration-200'>
             <div className="flex justify-center items-center gap-2 p-2">
               {item.icon1 === "FaRegHeart" && <div className="border-yellow-500 border-solid border p-2"><FaRegHeart /></div>}
