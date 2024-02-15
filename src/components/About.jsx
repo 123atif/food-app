@@ -7,7 +7,7 @@ const About = () => {
       <h2 className="font-bold text-4xl text-center mb-7">
       <span className="text-yellow-500">ABOUT</span> <span className="text-white">US</span>
         </h2>
-        <div className='flex flex-col sm:flex-row sm:items-center pb-2 bg-zinc-900 mt-3'>
+        <div className='flex flex-col sm:flex-row sm:items-center pb-2 bg-gray mt-3'>
           <img src='./src/images/about-img1.jpg' alt="About Image" className='w-full h-full sm:w-[35rem] sm:mb-0'/>
           <div className="ml-2 sm:ml-8 mb-5 mt-3">
             <h2 className="font-bold text-3xl text-white mb-1">
