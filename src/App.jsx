@@ -8,6 +8,8 @@ import About from './components/About';
 import Product from './components/Product';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
+import Blogs from './components/Blogs';
+import Footer from './components/Footer';
 
 function App() {
   const [click, setClick] = useState(false);
@@ -23,6 +25,8 @@ function App() {
       <Product/>
       <Reviews/>
       <Contact/>
+      <Blogs/>
+      <Footer/>
     </div>
     
   );

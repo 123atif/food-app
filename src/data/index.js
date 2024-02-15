@@ -101,3 +101,28 @@ export const reviewList = [
         name: "Jhon Deo"
     }
 ];
+
+export const blogData= [
+  {
+    id: 1,
+    img: "./src/images/blog-1.jpeg",
+    title: "Tasty And Refreshing Spices",
+    date: "By Admin / 21st May, 2021",
+    des: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit, Non, Dicta."
+  },
+  {
+    id: 2,
+    img: "./src/images/blog-2.jpeg",
+    title: "Tasty And Refreshing Spices",
+    date: "By Admin / 21st May, 2021",
+    des: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit, Non, Dicta."
+
+  },
+  {
+    id: 3,
+    img: "./src/images/blog-3.jpeg",
+    title: "Tasty And Refreshing Spices",
+    date: "By Admin / 21st May, 2021",
+    des: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit, Non, Dicta."
+  },
+]
