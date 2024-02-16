@@ -1,6 +1,5 @@
-// App.js
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; // Import Link from react-router-dom
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Horizontalline from './components/Horizontalline';
 import ResponsiveNavbar from './components/ResponsiveNavbar';
@@ -16,12 +15,20 @@ import Footer from './components/Footer';
 function App() {
   const [click, setClick] = useState(false);
   return (
-    <div>
-      <Navbar click={click} setClick={setClick} />
-      <ResponsiveNavbar click={click} setClick={setClick} />
-      <Horizontalline/>
-      <BrowserRouter>
-        <Routes>
+    // <BrowserRouter>
+      <div>
+        <Navbar click={click} setClick={setClick} />
+        <ResponsiveNavbar click={click} setClick={setClick} />
+        <Horizontalline/>
+        <HeroSection/>
+        <About/>
+        <Menu/>
+        <Product/>
+        <Reviews/>
+        <Contact/>
+        <Blogs/>
+        <Footer/>
+        {/* <Routes>
           <Route path="/" element={<HeroSection />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
@@ -29,10 +36,10 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blogs" element={<Blogs />} />
-        </Routes>
-      </BrowserRouter>
-      <Footer/>
-    </div>
+        </Routes> */}
+      </div>
+        
+    // </BrowserRouter>
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="py-8 px-4 sm:px-8 md:px-16 lg:px-28">
+    <div className="py-8 px-4 sm:px-8 md:px-16 lg:px-28" id='about'>
       <div className="flex flex-col items-center">
       <h2 className="font-bold text-4xl text-center mb-7">
       <span className="text-yellow-500">ABOUT</span> <span className="text-white">US</span>
@@ -21,8 +21,10 @@ const About = () => {
               It has survived not only five centuries, but also the leap into electronic typesetting,
               remaining essentially unchanged. It was popularised
             </p>
-            <button className='text-white bg-yellow-500 p-2 px-6'>Learn More</button>
-          </div>
+            <button className='text-white bg-yellow-500 p-2 px-4 hover:hover:pr-10 hover:pl-10 hover:opacity-75 duration-300'>
+            Learn More
+        </button> 
+         </div>
         </div>
       </div>
     </div>
