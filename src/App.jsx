@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Horizontalline from './components/Horizontalline';
 import ResponsiveNavbar from './components/ResponsiveNavbar';
 import HeroSection from './components/Hero';
 import About from './components/About';
@@ -19,7 +18,7 @@ function App() {
       <div>
         <Navbar click={click} setClick={setClick} />
         <ResponsiveNavbar click={click} setClick={setClick} />
-        <Horizontalline/>
+        
         <HeroSection/>
         <About/>
         <Menu/>

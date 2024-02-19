@@ -3,9 +3,9 @@ import { BsSearch } from 'react-icons/bs';
 import { FaShoppingCart } from 'react-icons/fa';
 import { TiThMenu } from 'react-icons/ti';
 import { RxCross2 } from 'react-icons/rx';
+import { ImCross } from "react-icons/im";
 // import { Link } from 'react-scroll';
 import { menuList } from '../data';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Navbar = ({ click, setClick }) => {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 	const [searchOpen, setSearchOpen] = useState(false);
@@ -15,37 +15,37 @@ const Navbar = ({ click, setClick }) => {
 			<img src="./src/images/logo.png" alt="Logo" className="h-12 w-14 lg:h-[70px] lg:w-[75px]" />
 			<ul className="hidden md:flex text-white ml-4">
 				<li className="px-2 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-					<a href="#home" spy={true} smooth={true} offset={50} duration={500}>
+					<a href="#home"  spy="true" smooth="true" offset={50} duration={500}>
 						Home
 					</a>
 				</li>
 				<li className="px-2 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-					<a href="#about" spy={true} smooth={true} offset={50} duration={500}>
+					<a href="#about" spy="true" smooth="true" offset={50} duration={500}>
 						About
 					</a>
 				</li>
 				<li className="px-2 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-					<a href="#menu" spy={true} smooth={true} offset={50} duration={500}>
+					<a href="#menu" spy="true" smooth="true" offset={50} duration={500}>
 						Menu
 					</a>
 				</li>
 				<li className="px-2 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-					<a href="#products" spy={true} smooth={true} offset={50} duration={500}>
+					<a href="#products" spy="true" smooth="true" offset={50} duration={500}>
 						Products
 					</a>
 				</li>
 				<li className="px-2 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-					<a href="#review" spy={true} smooth={true} offset={50} duration={500}>
+					<a href="#review" spy="true" smooth="true" offset={50} duration={500}>
 						Reviews
 					</a>
 				</li>
 				<li className="px-2 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-					<a href="#contact" spy={true} smooth={true} offset={50} duration={500}>
+					<a href="#contact" spy="true" smooth="true" offset={50} duration={500}>
 						Contact
 					</a>
 				</li>
 				<li className="px-2 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-					<a href="#blogs" spy={true} smooth={true} offset={50} duration={500}>
+					<a href="#blogs" spy="true" smooth="true" offset={50} duration={500}>
 						Blogs
 					</a>
 				</li>
@@ -69,7 +69,7 @@ const Navbar = ({ click, setClick }) => {
 							className={`absolute flex items-center bg-white right-24 top-0 z-10 w-1/3 px-3 py-2 border border-gray-300 duration-500 ${searchOpen ? 'translate-y-24' : 'translate-y-0'}`}
 						>
 							<input type="text" placeholder="Search Here..." className="text-lg outline-none w-full" />
-							<BsSearch />
+							<BsSearch className='cursor-pointer transition duration-500 hover:text-yellow-500 text-2xl'/>
 						</div>
 					)}
 					{searchOpen && (
@@ -93,17 +93,17 @@ const Navbar = ({ click, setClick }) => {
                   <div className='flex gap-8 items-center'>
                   <img src={item.img} alt="Food" className="lg:w-20 h-20" />
 										<div>
-											<p>{item.title}</p>
-											<p>{item.price}</p>
+											<p className='font-bold text-xl'>{item.title}</p>
+											<p className='text-yellow-500'>{item.price}/-</p>
 										</div>
                   </div>
 										
-										<p className="text-black font-bold text-2xl left-60 hover:border-yellow-500 cursor-pointer hover:text-yellow-500">
-											X
-										</p>
+		
+										<ImCross className="text-black mb-8 font-bold text-xl left-56 hover:border-yellow-500 cursor-pointer hover:text-yellow-500"/>
+									
 									</div>
 
-									<button className="  text-white bg-yellow-500 p-1 hover:opacity-75 duration-300">
+									<button className="text-white bg-yellow-500 p-1 hover:opacity-75 duration-300">
 										Check Out
 									</button>
 								</div>

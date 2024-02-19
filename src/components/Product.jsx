@@ -20,12 +20,12 @@ const Product = () => {
             </div>
             <img src={item.img} alt='Food items' className='mx-auto w-20 h-20 sm:w-60 md:w-30 md:h-60' />
             <p className='font-bold'>{item.title}</p>
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-2">
               <ReactStars value={4} activeColors={["#FFCE00", "#9177FF", "#8568FC"]} />
             </div>
-            <div className='flex justify-center'>
-            <p className='font-bold'>{item.price} </p>
-            <s className='text-white text-xs mt-2'> {item.cut}</s>
+            <div className='flex justify-center mt-2'>
+            <p className='font-bold '>{item.price} </p>
+            <s className='text-white text-xs mt-2 ml-1'> {item.cut}</s>
            </div>
           </div> 
         ))}
