@@ -3,12 +3,13 @@
 @import 'tailwindcss/utilities';
 
 /* index.css */
-body {
+body ,html{
     background-color: black;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: 'Roboto';
+    scroll-behavior: smooth;
   }
 
   ::-webkit-scrollbar {
@@ -26,3 +27,4 @@ body {
     background: #ffffff;
     border-radius: 5px;
 }
+

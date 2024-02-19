@@ -5,7 +5,7 @@ import ReactStars from 'react-rating-star-with-type';
 
 const Reviews = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" id='reviews'>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" id='review'>
     <div className='m-5'>
     <Heading firstHeading={"CUSTOMER'S  REVIEW"} />
       </div>

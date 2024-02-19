@@ -9,7 +9,9 @@ const Blogs = () => {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {blogData.map((item) => (
           <div key={item.id} className='text-white text-center border-solid border-2 border-yellow-500 pb-5 hover:bg-yellow-900 duration-200'>
-            <img src={item.img} alt='Food items' className='w-full h-60 hover:scale-105 transition duration-500 cursor-pointer' />
+          <div className=' overflow-hidden'>
+            <img src={item.img} alt='Food items' className='w-full h-60 hover:scale-125 transition duration-500 cursor-pointer' />
+          </div>
             <div className="mt-4 mb-2 mx-2">
               <p className='text-2xl'>{item.title}</p>
               <p className='text-yellow-500 text-lg'>{item.date}</p>
