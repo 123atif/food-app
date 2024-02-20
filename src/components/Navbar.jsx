@@ -5,16 +5,16 @@ import { TiThMenu } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
 import { menuList } from "../data";
-const Navbar = ({ click, setClick }) => {
-  const [cartsidebarOpen, setcartsidebarOpen] = useState(true);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [show, setShow] = useState(false);
+const Navbar = ({ menuBar, setMenuBar }) => {
+  const [cartSideBar, setCartSideBar] = useState(true);
+  const [searchField, setSearchField] = useState(false);
+  const [scrollBar, setScrollBar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setcartsidebarOpen(false);
-      setSearchOpen(false);
-      setClick(false);
+      setCartSideBar(false);
+      setSearchField(false);
+      setMenuBar(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -23,9 +23,9 @@ const Navbar = ({ click, setClick }) => {
   }, []);
 
   const handleCart = () => {
-    setcartsidebarOpen(!cartsidebarOpen);
-    setSearchOpen(false);
-    setClick(false);
+    setCartSideBar(!cartSideBar);
+    setSearchField(false);
+    setMenuBar(false);
   };
   return (
     <div className="fixed top-0 bg-black border-yellow-500 border-b-2 z-30 w-full flex justify-between items-center px-6 lg:px-24 py-2">
@@ -92,14 +92,14 @@ const Navbar = ({ click, setClick }) => {
           <BsSearch
             className="text-white z-20 w-7 text-2xl cursor-pointer transition duration-500 hover:text-yellow-500"
             onClick={() => {
-              setSearchOpen(!searchOpen);
-              setcartsidebarOpen(false);
-              setClick(false);
+              setSearchField(!searchField);
+              setCartSideBar(false);
+              setMenuBar(false);
             }}
           />
-          {searchOpen && (
+          {searchField && (
             <div
-              className={`absolute flex items-center bg-white right-24 top-0 z-10 w-1/3 px-3 py-2 border border-gray-300 duration-500 ${searchOpen ? "translate-y-24" : "translate-y-0"}`}
+              className={`absolute flex items-center bg-white right-24 top-0 z-10 w-1/3 px-3 py-2 border border-gray-300 duration-500 ${searchField ? "translate-y-24" : "translate-y-0"}`}
             >
               <input
                 type="text"
@@ -109,18 +109,18 @@ const Navbar = ({ click, setClick }) => {
               <BsSearch className="cursor-pointer transition duration-500 hover:text-yellow-500 text-2xl" />
             </div>
           )}
-          {searchOpen && (
+          {searchField && (
             <div
               class="fixed bottom-0 left-0 right-0 top-0 z-0"
-              onClick={() => setSearchOpen(false)}
+              onClick={() => setSearchField(false)}
             ></div>
           )}
           <FaShoppingCart
             className="text-white w-7 text-2xl z-20 hover:border-yellow-500 cursor-pointer hover:text-yellow-500"
             onClick={handleCart}
           />
-          {cartsidebarOpen && (
-            <div className={`flex flex-col fixed top-[67px] md:top-[67px] lg:top-[88px] right-0 z-20 w-80 md:w-[350px] duration-300 h-full md:h-[calc(100vh-70px)] overflow-x-hidden overflow-y-auto text-black bg-white ${show ? "hidden" : ""}`}>
+          {cartSideBar && (
+            <div className={`flex flex-col fixed top-[67px] md:top-[67px] lg:top-[88px] right-0 z-20 w-80 md:w-[350px] duration-300 h-full md:h-[calc(100vh-70px)] overflow-x-hidden overflow-y-auto text-black bg-white ${scrollBar ? "hidden" : ""}`}>
 
 
               {menuList.map((item) => (
@@ -144,34 +144,34 @@ const Navbar = ({ click, setClick }) => {
               ))}
             </div>
           )}
-          {cartsidebarOpen && (
+          {cartSideBar && (
             <div
               class="fixed bottom-0 left-0 right-0 top-0 z-0"
-              onClick={() => setcartsidebarOpen(false)}
+              onClick={() => setCartSideBar(false)}
             ></div>
           )}
         </div>
         <div
           className="md:hidden sm:flex z-20"
           onClick={() => {
-            setcartsidebarOpen(false);
-            setSearchOpen(false);
+            setCartSideBar(false);
+            setSearchField(false);
           }}
         >
           <TiThMenu
-            onClick={() => setClick(!click)}
-            className={`text-white w-7 text-xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${click === false ? "block md:hidden" : "hidden"}`}
+            onClick={() => setMenuBar(!menuBar)}
+            className={`text-white w-7 text-xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${menuBar === false ? "block md:hidden" : "hidden"}`}
           />
 
           <RxCross2
-            onClick={() => setClick(!click)}
-            className={` text-white w-7 text-xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${click === true ? "block md:hidden" : "hidden"}`}
+            onClick={() => setMenuBar(!menuBar)}
+            className={` text-white w-7 text-xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${menuBar === true ? "block md:hidden" : "hidden"}`}
           />
         </div>
-        {click && (
+        {menuBar && (
           <div
             class="fixed bottom-0 left-0 right-0 top-0 z-0"
-            onClick={() => setClick(false)}
+            onClick={() => setMenuBar(false)}
           ></div>
         )}
       </div>

@@ -12,12 +12,12 @@ import Blogs from './components/Blogs';
 import Footer from './components/Footer';
 
 function App() {
-  const [click, setClick] = useState(false);
+  const [menuBar, setMenuBar] = useState(false);
   return (
     
       <div>
-        <Navbar click={click} setClick={setClick} />
-        <ResponsiveNavbar click={click} setClick={setClick} />
+        <Navbar menuBar={menuBar} setMenuBar={setMenuBar} />
+        <ResponsiveNavbar menuBar={menuBar} setMenuBar={setMenuBar} />
         
         <HeroSection/>
         <About/>

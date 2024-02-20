@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-const ResponsiveNavbar = ({ click,setClick }) => {
-  const [show, setShow] = useState(false);
+const ResponsiveNavbar = ({ menuBar,setMenuBar }) => {
+  const [scrollBar, setScrollBar] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setClick(false);
+      setMenuBar(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -15,8 +15,8 @@ const ResponsiveNavbar = ({ click,setClick }) => {
     <div
       className={`fixed z-30 w-[70%] max-w-[300px] duration-300 top-[65px]
       md:hidden h-[100%] overflow-x-hidden overflow-y-auto text-white bg-black ${
-        click ? 'right-0' : 'right-[-70%]'
-      } ${show && 'hidden'}`}
+        menuBar ? 'right-0' : 'right-[-70%]'
+      } ${scrollBar && 'hidden'}`}
     >
       {/* Responsive Menu-Bar*/}
       <ul>
