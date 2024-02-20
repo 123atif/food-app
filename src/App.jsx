@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 function App() {
   const [click, setClick] = useState(false);
   return (
-    // <BrowserRouter>
+    
       <div>
         <Navbar click={click} setClick={setClick} />
         <ResponsiveNavbar click={click} setClick={setClick} />
@@ -38,7 +38,7 @@ function App() {
         </Routes> */}
       </div>
         
-    // </BrowserRouter>
+    
   );
 }
 
