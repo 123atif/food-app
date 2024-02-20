@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Contact = () => {
   return (
     <div className="m-5 sm:m-10" id="contact">
-      <Heading Heading={'CONTACT US'} />
+      <Heading Heading={'CONTACT  US'} />
       <div className="bg-gray flex flex-col sm:flex-row m-3">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13604.684532050062!2d74.3514281!3d31.5194594!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905edd849289f%3A0xa0a0ca3b4a89cae6!2sCherry%20Byte%20Technologies!5e0!3m2!1sen!2s!4v1707888795213!5m2!1sen!2s"

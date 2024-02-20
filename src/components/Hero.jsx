@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 
 const HeroSection = () => {
 	return (
@@ -19,7 +19,7 @@ const HeroSection = () => {
 					<br />
 					tincidunt ut laoreet dolore magna aliquam erat volutpat.
 				</p>
-				<button className="text-white bg-yellow-500 p-2 px-4 hover:hover:pr-10 hover:pl-5 hover:opacity-75 duration-300">
+				<button className="text-white bg-yellow-500 p-2 px-4 hover:hover:pr-7 hover:pl-7 hover:opacity-75 duration-300">
 					Get Yours Now
 				</button>
 			</div>
