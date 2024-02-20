@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-const ResponsiveNavbar = ({ click }) => {
+const ResponsiveNavbar = ({ click,setClick }) => {
   const [show, setShow] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
