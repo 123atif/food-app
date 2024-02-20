@@ -4,23 +4,21 @@ import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
-// import { Link } from 'react-scroll';
 import { menuList } from "../data";
 const Navbar = ({ click, setClick }) => {
-  const [cartsidebarOpen, setcartsidebarOpen] = useState(false);
+  const [cartsidebarOpen, setcartsidebarOpen] = useState(true);
   const [searchOpen, setSearchOpen] = useState(false);
   const [show, setShow] = useState(false);
-  const controlNavbar = () => {
-    if (window.scrollY > 0) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  };
+
   useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
+    const handleScroll = () => {
+      setcartsidebarOpen(false);
+      setSearchOpen(false);
+      setClick(false);
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", controlNavbar);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -122,9 +120,8 @@ const Navbar = ({ click, setClick }) => {
             onClick={handleCart}
           />
           {cartsidebarOpen && (
-            <div
-  className={`flex flex-col fixed top-[68px] md:top-[87px] top right-0 z-20 w-[350px] duration-300 h-[calc(100vh-80px)] overflow-x-hidden overflow-y-auto text-black bg-white ${show && "hidden"}`}
->
+            <div className={`flex flex-col fixed top-[67px] md:top-[67px] lg:top-[88px] right-0 z-20 w-80 md:w-[350px] duration-300 h-full md:h-[calc(100vh-70px)] overflow-x-hidden overflow-y-auto text-black bg-white ${show ? "hidden" : ""}`}>
+
 
               {menuList.map((item) => (
                 <div key={item.id} className="p-3 flex flex-col gap-2">

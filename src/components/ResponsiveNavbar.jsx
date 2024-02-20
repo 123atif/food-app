@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from 'react';
 const ResponsiveNavbar = ({ click }) => {
   const [show, setShow] = useState(false);
-  const controlNavbar = () => {
-    if (window.scrollY > 250) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  };
   useEffect(() => {
-    window.addEventListener('scroll', controlNavbar);
-    return () => {
-      window.removeEventListener('scroll', controlNavbar);
+    const handleScroll = () => {
+      setClick(false);
     };
-  }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); 
+  
   return (
     <div
       className={`fixed z-30 w-[70%] max-w-[300px] duration-300 top-[65px]
