@@ -1,17 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
 const Search = () => {
   const [searchField, setSearchField] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setSearchField(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
       <BsSearch
         className="text-white z-20 w-7 text-2xl cursor-pointer transition duration-500 hover:text-yellow-500"
         onClick={() => {
           setSearchField(!searchField);
-          setCartSideBar(false);
-          setMenuBar(false);
         }}
       />
       {searchField && (
