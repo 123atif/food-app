@@ -20,8 +20,8 @@ const Contact = () => {
         ></iframe>
         <div className='flex flex-col justify-center items-center sm:w-1/2 p-5'>
           <h2 className="text-white text-4xl font-bold mb-5">GET IN TOUCH</h2>
-          <form className="w-full px-4 flex flex-col gap-5">
-            <div className="flex items-center gap-4 bg-gray border-solid border-2 border-yellow-500 hover:border-yellow-500 focus:border-yellow-500 w-full px-2 py-4">
+          <form className="w-full px-4 flex flex-col gap-5 overflow-hidden ">
+            <div className="flex items-center gap-4 bg-gray border-solid border-2 border-yellow-500 hover:border-yellow-500 focus:border-yellow-500 w-full px-2 py-2 sm:py-4  overflow-hidden">
               <FontAwesomeIcon icon={faUser} className=" text-white ml-4 size-6" />
               <input
                 type="text"
@@ -29,7 +29,7 @@ const Contact = () => {
                 className="text-white bg-gray outline-none flex-1"
               />
             </div>
-            <div className="flex items-center gap-4 bg-gray border-solid border-2 border-yellow-500 hover:border-yellow-500 focus:border-yellow-500 w-full px-2 py-4">
+            <div className="flex items-center gap-4 bg-gray border-solid border-2 border-yellow-500 hover:border-yellow-500 focus:border-yellow-500 w-full px-2 py-2 sm:py-4  overflow-hidden">
               <FontAwesomeIcon icon={faEnvelope} className="text-white ml-4 size-6" />
               <input
                 type="email"
@@ -37,7 +37,7 @@ const Contact = () => {
                 className="text-white bg-gray border-none outline-none flex-1"
               />
             </div>
-            <div className="flex items-center gap-4 bg-gray border-solid border-2 border-yellow-500 hover:border-yellow-500 focus:border-yellow-500 w-full px-2 py-4">
+            <div className="flex items-center gap-4 bg-gray border-solid border-2 border-yellow-500 hover:border-yellow-500 focus:border-yellow-500 w-full px-2 py-2 sm:py-4  overflow-hidden">
               <FontAwesomeIcon icon={faPhone} className=" text-white ml-4 size-6" />
               <input
                 type="number"

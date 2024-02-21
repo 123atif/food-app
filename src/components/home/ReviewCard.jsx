@@ -1,7 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-const ReviewCard = ({item}) => { // dfjbkfbjf
+const ReviewCard = ({item}) => { 
   return ( 
     <div
       key={item.id}
