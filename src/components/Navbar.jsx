@@ -16,9 +16,9 @@ const Navbar = ({ menuBar, setMenuBar }) => {
       setSearchField(false);
       setMenuBar(false);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -30,7 +30,7 @@ const Navbar = ({ menuBar, setMenuBar }) => {
   return (
     <div className="fixed top-0 bg-black border-yellow-500 border-b-2 z-30 w-full flex justify-between items-center px-6 lg:px-24 py-2">
       <img
-        src="./src/images/logo.png"
+        src="../src/assests/images/logo.png"
         alt="Logo"
         className="h-12 w-14 lg:h-[70px] lg:w-[75px]"
       />
@@ -99,7 +99,8 @@ const Navbar = ({ menuBar, setMenuBar }) => {
           />
           {searchField && (
             <div
-              className={`absolute flex items-center bg-white right-24 top-0 z-10 w-1/3 px-3 py-2 border border-gray-300 duration-500 ${searchField ? "translate-y-24" : "translate-y-0"}`}
+              className={`absolute flex items-center bg-white right-7 lg:right-36 top-[-20px] lg:top-1 
+              z-10 w-96 md:w-1/3 px-3 py-2 border border-gray-300 duration-500 ${setSearchField ? "translate-y-24" : "translate-y-0"}`}
             >
               <input
                 type="text"
@@ -120,9 +121,9 @@ const Navbar = ({ menuBar, setMenuBar }) => {
             onClick={handleCart}
           />
           {cartSideBar && (
-            <div className={`flex flex-col fixed top-[67px] md:top-[67px] lg:top-[88px] right-0 z-20 w-80 md:w-[350px] duration-300 h-full md:h-[calc(100vh-70px)] overflow-x-hidden overflow-y-auto text-black bg-white ${scrollBar ? "hidden" : ""}`}>
-
-
+            <div
+              className={`flex flex-col fixed top-[67px] md:top-[67px] lg:top-[88px] right-0 z-20 w-80 md:w-[350px] duration-300 h-full md:h-[calc(100vh-70px)] overflow-x-hidden overflow-y-auto text-black bg-white ${scrollBar ? "hidden" : ""}`}
+            >
               {menuList.map((item) => (
                 <div key={item.id} className="p-3 flex flex-col gap-2">
                   <div className="flex justify-between items-center">

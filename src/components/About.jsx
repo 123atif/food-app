@@ -1,14 +1,15 @@
 import React from 'react';
+import Heading from './common/Heading';
 
 const About = () => {
   return (
     <div className="py-8 px-4 sm:px-8 md:px-16 lg:px-28" id='about'>
+       <div className='m-5'  id="products">
+        <Heading Heading={"ABOUT  US"}/>
+      </div>
       <div className="flex flex-col items-center">
-        <h2 className="font-bold text-4xl text-center mb-7">
-          <span className="text-yellow-500">ABOUT</span> <span className="text-white">US</span>
-        </h2>
-        <div className='flex flex-col sm:flex-row items-center bg-gray mt-3 pb-2'>
-          <img src='./src/images/about-img1.jpg' alt="About Image" className='w-full h-full sm:w-2/5 md:w-1/2 sm:mb-0'/>
+        <div className='flex flex-col sm:flex-row items-center bg-gray mt-3 lg:pr-7'>
+          <img src='../src/assests/images/about-img1.jpg' alt="About Image" className='w-full h-full sm:w-2/5 md:w-1/2 sm:mb-0'/>
           <div className="ml-2 sm:ml-8 mb-5 mt-3 sm:w-3/5 lg:w-2/3">
             <h2 className="font-bold text-3xl text-white mb-1">
               What Makes Our Food Special?

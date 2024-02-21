@@ -1,75 +1,70 @@
 export const productList = [
     {
-        id:1,
-        icon1: "FaRegHeart",
-        icon2: "IoIosEye",
-        icon3: "FaShoppingCart",
-        img: "./src/images/product-1.png",
+        id: 1,
+        img: "../src/assests/images/product-1.png",
         title: "Fresh Coffee",
-        price: "$15.99",
-        cut: "$20.99"
+        discountPrice: "$15.99",
+        originalPrice: "$20.99",
+       
     },
     {
-        id:2,
-        icon1: "FaRegHeart",
-        icon2: "IoIosEye",
-        icon3: "FaShoppingCart",
-        img: "./src/images/product-2.png",
+        id: 2,
+        img: "../src/assests/images/product-2.png",
         title: "Fresh Coffee",
-        price: "$15.99",
-        cut: "$20.99"
+        discountPrice: "$15.99",
+        originalPrice: "$20.99",
+       
     },
     {
-        id:3,
-        icon1: "FaRegHeart",
-        icon2: "IoIosEye",
-        icon3: "FaShoppingCart",
-        img: "./src/images/product-3.png",
+        id: 3,
+        img: "../src/assests/images/product-3.png",
         title: "Fresh Coffee",
-        price: "$15.99",
-        cut: "$20.99"
+        discountPrice: "$15.99",
+        originalPrice: "$20.99",
+       
     }
 ];
+
 
 export const menuList = [
     {
       id: 1,
-      img: "./src/images/menu-1.png",
+      img: "../src/assests/images/menu-1.png",
       title: "Tasty Grillz",
       price: "$700",
       amount: 1,
     },
     {
       id: 2,
-      img: "./src/images/menu-2.png",
+      img: "../src/assests/images/menu-2.png",
       title: "Movable Food",
       price: "$600",
       amount: 1,
     },
     {
       id: 3,
-      img: "./src/images/menu-3.png",
+      img: "../src/assests/images/menu-3.png",
       title: "Cleaned & Fresh",
       price: "$500",
       amount: 1,
     },
     {
       id: 4,
-      img: "./src/images/menu-4.png",
+      img: "../src/assests/images/menu-4.png",
       title: "Snap Kitchen",
       price: "$400",
       amount: 1,
     },
     {
       id: 5,
-      img: "./src/images/menu-5.png",
+      img: "../src/assests/images/menu-5.png",
       title: "Sun Natural",
       price: "$4000",
       amount: 1,
     },
     {
       id: 6,
-      img: "./src/images/menu-6.png",
+      img: "../src/assests/images/menu-6.png",
       title: "Burger",
       price: "$300",
       amount: 1,
@@ -80,24 +75,24 @@ export const menuList = [
 export const reviewList = [
     {
         id:1,
-        img: "./src/images/quote-img.png",
+        img: "../src/assests/images/quote-img.png",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis, turpis quis elementum vestibulum, turpis urna maximus mi, pretium vestibulum nibh urna a nisi. Maecenas eget volutpat lorem. Maecenas et convallis leo. Sed sem felis, vehicula sed elit id, rhoncus laoreet ipsum. Pellentesque dictum a turpis non pellentesque.",
-        image: "./src/images/pic-1.png",
+        image: "../src/assests/images/pic-1.png",
         name: "Jhon Deo"
     },
     {
         id:2,
-        img: "./src/images/quote-img.png",
+        img: "../src/assests/images/quote-img.png",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis, turpis quis elementum vestibulum, turpis urna maximus mi, pretium vestibulum nibh urna a nisi. Maecenas eget volutpat lorem. Maecenas et convallis leo. Sed sem felis, vehicula sed elit id, rhoncus laoreet ipsum. Pellentesque dictum a turpis non pellentesque.",
-        image: "./src/images/pic-1.png",
+        image: "../src/assests/images/pic-1.png",
         name: "Jhon Deo"
         
     },
     {
         id:3,
-        img: "./src/images/quote-img.png",
+        img: "../src/assests/images/quote-img.png",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis, turpis quis elementum vestibulum, turpis urna maximus mi, pretium vestibulum nibh urna a nisi. Maecenas eget volutpat lorem. Maecenas et convallis leo. Sed sem felis, vehicula sed elit id, rhoncus laoreet ipsum. Pellentesque dictum a turpis non pellentesque.",
-        image: "./src/images/pic-1.png",
+        image: "../src/assests/images/pic-1.png",
         name: "Jhon Deo"
     }
 ];
@@ -105,14 +100,14 @@ export const reviewList = [
 export const blogData= [
   {
     id: 1,
-    img: "./src/images/blog-1.jpeg",
+    img: "../src/assests/images/blog-1.jpeg",
     title: "Tasty And Refreshing Spices",
     date: "By Admin / 21st May, 2021",
     des: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit, Non, Dicta."
   },
   {
     id: 2,
-    img: "./src/images/blog-2.jpeg",
+    img: "../src/assests/images/blog-2.jpeg",
     title: "Tasty And Refreshing Spices",
     date: "By Admin / 21st May, 2021",
     des: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit, Non, Dicta."
@@ -120,7 +115,7 @@ export const blogData= [
   },
   {
     id: 3,
-    img: "./src/images/blog-3.jpeg",
+    img: "../src/assests/images/blog-3.jpeg",
     title: "Tasty And Refreshing Spices",
     date: "By Admin / 21st May, 2021",
     des: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit, Non, Dicta."
