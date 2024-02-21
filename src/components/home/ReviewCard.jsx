@@ -1,8 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-const ReviewCard = ({item}) => {
-  return (
+const ReviewCard = ({item}) => { // dfjbkfbjf
+  return ( 
     <div
       key={item.id}
       className="text-white text-center border-solid border-2 border-yellow-500 p-4"
