@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import ShoppingCard from "../../components/home/shoppingCard";
 import { menuList } from "../../data";
-const MenuItems = () => {
-  const [cartSideBar, setCartSideBar] = useState(true);
-  //   const [scrollBar, setScrollBar] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setCartSideBar(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+
+const MenuItems = ({
+  cartSideBar,
+  setCartSideBar,
+  setSearchField,
+  setMenuBar,
+}) => {
   const handleCart = () => {
     setCartSideBar(!cartSideBar);
+    setSearchField(false);
+    setMenuBar(false);
   };
 
   return (
@@ -40,6 +37,13 @@ const MenuItems = () => {
           onClick={() => setCartSideBar(false)}
         ></div>
       )}
+      <div
+        className="md:hidden sm:flex z-20"
+        onClick={() => {
+          setCartSideBar(false);
+          setSearchField(false);
+        }}
+      ></div>
     </div>
   );
 };

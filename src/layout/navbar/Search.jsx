@@ -1,25 +1,17 @@
-import { useState, useEffect } from "react";
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
-const Search = () => {
-  const [searchField, setSearchField] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setSearchField(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+const Search = ({ setCartSideBar, menuBar, setSearchField, searchField }) => {
+  const toggleSearchField = () => {
+    setSearchField(!searchField);
+    setCartSideBar(false);
+  };
+
   return (
     <div>
       <BsSearch
         className="text-white z-20 w-7 text-2xl cursor-pointer transition duration-500 hover:text-yellow-500"
-        onClick={() => {
-          setSearchField(!searchField);
-        }}
+        onClick={toggleSearchField}
       />
       {searchField && (
         <div
@@ -36,10 +28,17 @@ const Search = () => {
       )}
       {searchField && (
         <div
-          class="fixed bottom-0 left-0 right-0 top-0 z-0"
+          className="fixed bottom-0 left-0 right-0 top-0 z-0"
           onClick={() => setSearchField(false)}
         ></div>
       )}
+      <div
+        className="md:hidden sm:flex z-20"
+        onClick={() => {
+          setCartSideBar(false);
+          setSearchField(false);
+        }}
+      ></div>
     </div>
   );
 };
