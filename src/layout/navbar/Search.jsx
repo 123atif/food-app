@@ -1,10 +1,15 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
-const Search = ({ setCartSideBar, menuBar, setSearchField, searchField }) => {
+const Search = ({
+  setCartSideBar,
+  setMenuBar,
+  setSearchField,
+  searchField,
+}) => {
   const toggleSearchField = () => {
     setSearchField(!searchField);
-    setCartSideBar(false);
+    setCartSideBar(false); // Close cart sidebar when opening search field
   };
 
   return (
@@ -23,22 +28,10 @@ const Search = ({ setCartSideBar, menuBar, setSearchField, searchField }) => {
             placeholder="Search Here..."
             className="text-lg outline-none w-full"
           />
+          {/* Inside input field icon */}
           <BsSearch className="cursor-pointer transition duration-500 hover:text-yellow-500 text-2xl" />
         </div>
       )}
-      {searchField && (
-        <div
-          className="fixed bottom-0 left-0 right-0 top-0 z-0"
-          onClick={() => setSearchField(false)}
-        ></div>
-      )}
-      <div
-        className="md:hidden sm:flex z-20"
-        onClick={() => {
-          setCartSideBar(false);
-          setSearchField(false);
-        }}
-      ></div>
     </div>
   );
 };

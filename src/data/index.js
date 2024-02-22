@@ -125,5 +125,5 @@ export const navLinks = [
   "Products",
   "Reviews",
   "Contact",
-  "Blog",
+  "Blogs",
 ];

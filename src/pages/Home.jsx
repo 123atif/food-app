@@ -1,11 +1,11 @@
 import React from "react";
-import HeroSection from "../components/Hero";
-import About from "../components/About";
-import Menu from "../components/Menu";
-import Product from "../components/Product";
-import Reviews from "../components/Reviews";
-import Contact from "../components/Contact";
-import Blogs from "../components/Blogs";
+import HeroSection from "../components/home/Hero";
+import About from "../components/home/About";
+import Menu from "../components/home/Menu";
+import Product from "../components/home/Product";
+import Reviews from "../components/home/Reviews";
+import Contact from "../components/home/Contact";
+import Blogs from "../components/home/Blogs";
 
 const Home = () => {
   return (

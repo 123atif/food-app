@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="relative mt-16 md:mt-0" id="home">
+    <div className="relative mt-16 md:mt-0" id="Home">
       <img
         src="../src/assests/images/home-imgg.jpg"
         className="absolute w-full h-full bg-black brightness-50 opacity-70"

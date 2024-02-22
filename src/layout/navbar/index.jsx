@@ -6,25 +6,28 @@ import MenuBar from "./NavbarMenu";
 import { navLinks } from "../../data";
 
 const Navbar = () => {
+  // Define state variables for cartSideBar, menuBar, and searchField
   const [cartSideBar, setCartSideBar] = useState(true);
   const [menuBar, setMenuBar] = useState(false);
   const [searchField, setSearchField] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setCartSideBar(false);
-      setSearchField(false);
-      setMenuBar(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // Comment for sometime this function works for onscroll when scroll closes the search field,cart & menu
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setCartSideBar(false);
+  //     setSearchField(false);
+  //     setMenuBar(false);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
   return (
     <div className="fixed top-0 bg-black border-yellow-500 border-b-2 z-30 w-full flex justify-between items-center px-6 lg:px-24 py-2">
       <Logo />
       {/* Desktop */}
+      {/* Mapping menuList data in order to display items on the page  */}
       <ul className="hidden md:flex text-white ml-4">
         {navLinks?.map((item, index) => (
           <li
@@ -37,6 +40,7 @@ const Navbar = () => {
       </ul>
       <div className="flex gap-4">
         <div className="flex justify-end space-x-4">
+          {/* Passing props into child components so they can access the functions that control their states */}
           <Search
             searchField={searchField}
             setSearchField={setSearchField}

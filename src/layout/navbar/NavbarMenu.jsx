@@ -8,12 +8,12 @@ const MenuBar = ({ navLinks, menuBar, setMenuBar }) => {
       <div className="flex gap-4">
         <TiThMenu
           onClick={() => setMenuBar(!menuBar)}
-          className={`text-white w-7 text-xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${!menuBar ? "block md:hidden" : "hidden"}`}
+          className={`text-white w-7 text-2xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${!menuBar ? "block md:hidden" : "hidden"}`}
         />
 
         <RxCross2
           onClick={() => setMenuBar(!menuBar)}
-          className={` text-white w-7 text-xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${menuBar ? "block md:hidden" : "hidden"}`}
+          className={` text-white w-7 text-2xl hover:border-yellow-500 cursor-pointer hover:text-yellow-500 ${menuBar ? "block md:hidden" : "hidden"}`}
         />
       </div>
       {menuBar && (
@@ -27,10 +27,24 @@ const MenuBar = ({ navLinks, menuBar, setMenuBar }) => {
                 key={index}
                 className="p-3 transition-all duration-300 border-b-2 border-transparent hover:border-yellow-500 cursor-pointer hover:text-yellow-500"
               >
-                <a href="#">{item}</a>
+                <a href={"#" + item}>{item}</a>
               </li>
             ))}
           </ul>
+          {/* {menuBar && (
+            <div
+              className="fixed bottom-0 left-0 right-0 top-0 z-0 h-fit"
+              onClick={() => setCartSideBar(false)}
+            ></div>
+          )} */}
+          {/* <div
+            className="md:hidden sm:flex z-20"
+            onClick={() => {
+              setCartSideBar(false);
+              setSearchField(false);
+              setMenuBar(true);
+            }}
+          ></div> */}
         </div>
       )}
     </div>
