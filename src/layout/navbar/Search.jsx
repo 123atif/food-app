@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsSearch } from "react-icons/bs";
+import { CartContext } from "../../CartContext";
 
-const Search = ({
-  setCartSideBar,
-  setMenuBar,
-  setSearchField,
-  searchField,
-}) => {
+const Search = ({ setMenuBar, setSearchField, searchField }) => {
+  const { setCartOpen } = useContext(CartContext);
   const toggleSearchField = () => {
     setSearchField(!searchField);
-    setCartSideBar(false); // Close cart sidebar when opening search field
+    setCartOpen(false); // Close cart sidebar when opening search field
   };
 
   return (

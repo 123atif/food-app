@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Logo from "./logo";
 import Search from "./search";
 import MenuItems from "./CartItems";
 import MenuBar from "./NavbarMenu";
 import { navLinks } from "../../data";
+import { CartContext } from "../../CartContext";
 
 const Navbar = () => {
   // Define state variables for cartSideBar, menuBar, and searchField
-  const [cartSideBar, setCartSideBar] = useState(true);
   const [menuBar, setMenuBar] = useState(false);
   const [searchField, setSearchField] = useState(false);
+  const { isCartOpen } = useContext(CartContext);
 
   // Comment for sometime this function works for onscroll when scroll closes the search field,cart & menu
   // useEffect(() => {
@@ -44,15 +45,14 @@ const Navbar = () => {
           <Search
             searchField={searchField}
             setSearchField={setSearchField}
-            setCartSideBar={setCartSideBar}
             setMenuBar={setMenuBar}
           />
-          <MenuItems
-            setCartSideBar={setCartSideBar}
-            cartSideBar={cartSideBar}
-            setSearchField={setSearchField}
-            setMenuBar={setMenuBar}
-          />
+          {true && (
+            <MenuItems
+              setSearchField={setSearchField}
+              setMenuBar={setMenuBar}
+            />
+          )}
           {/* Mobile */}
           <MenuBar
             navLinks={navLinks}
